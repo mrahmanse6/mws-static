@@ -1,0 +1,93 @@
+/* Custom styles for enhanced visual appeal */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #02121a 0%, #041726 50%, #022b2b 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00b6a6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.hero-pattern {
+    background-image: radial-gradient(circle at 15% 50%, rgba(29, 78, 216, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 25%);
+}
+
+/* Animated background elements */
+.floating-shape {
+    animation: float 8s ease-in-out infinite;
+}
+
+.floating-shape:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.floating-shape:nth-child(3) {
+    animation-delay: 4s;
+}
+
+/* Utility for content max width */
+.content-max {
+    max-width: 1100px;
+}
+
+/* Small, tasteful animations */
+.fade-up {
+    transform: translateY(12px);
+    opacity: 0;
+    animation: up .6s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: .06s;
+}
+
+.delay-2 {
+    animation-delay: .12s;
+}
+
+.delay-3 {
+    animation-delay: .18s;
+}
+
+@keyframes up {
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
